@@ -1,0 +1,21 @@
+- name: install pip
+  become: yes
+  become_method: sudo
+  apt:
+    name: python-pip
+- name: install AWS CLI
+  pip:
+    name: awscli
+    extra_args: --upgrade --user
+- name: add ~/.local/bin to PATH
+  lineinfile:
+    path: ~/.bashrc
+    line: 'export PATH=~/.local/bin:$PATH'
+- name: mkdir ~/.aws
+  file:
+    path: ~/.aws
+    state: directory
+- name: copy file to ~/.aws/credentials
+  copy:
+    src: config/files/.aws_credentials
+    dest: ~/.aws/credentials

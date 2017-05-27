@@ -1,0 +1,21 @@
+- name: provision ~/.vim
+  file:
+    path: ~/.vim
+    state: directory
+- name: provision ~/.vim/colors
+  file:
+    path: ~/.vim/colors
+    state: directory
+- name: copy file to ~/.vim/colors/winsubplay.vim
+  copy:
+    src: config/files/winsubplay.vim
+    dest: ~/.vim/colors/winsubplay.vim
+- name: provision ~/.vimrc
+  file:
+    path: ~/.vimrc
+    state: touch
+- name: select colorscheme in ~/.vimrc
+  lineinfile:
+    path: ~/.vimrc
+    regexp: '^colorscheme'
+    line: 'colorscheme winsubplay'

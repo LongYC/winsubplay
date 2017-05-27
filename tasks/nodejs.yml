@@ -1,0 +1,17 @@
+- name: git clone to ~/.nvm
+  git:
+    repo: https://github.com/creationix/nvm.git
+    clone: yes
+    update: no
+    dest: ~/.nvm
+    version: "{{ nvm_version }}"
+- name: load nvm in ~/.bashrc
+  blockinfile:
+    path: ~/.bashrc
+    block: |
+      export NVM_DIR="$HOME/.nvm"
+      [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use
+- name: copy file to ~/.npmrc
+  copy:
+    src: config/files/.npmrc
+    dest: ~/.npmrc

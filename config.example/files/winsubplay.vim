@@ -1,0 +1,1 @@
+" Dunia berwarna-warni!

@@ -1,0 +1,11 @@
+---
+- hosts: ubuntu
+  tasks:
+    - name: load variables
+      include_vars: config/variables.yml
+    - include: tasks/bash.yml
+    - include: tasks/bash_cdhome.yml
+    - include: tasks/vim.yml
+    - include: tasks/git.yml
+    - include: tasks/nodejs.yml
+    - include: tasks/aws.yml
