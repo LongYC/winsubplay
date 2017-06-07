@@ -11,9 +11,10 @@ system.
 - Go to a preferred directory (e.g. workspace inside mounted Windows directory) with `cdhome`.
 - Configure Vim colorscheme.
 - **Git**: Configure `git` user email and name, set the editor to `vim`.
+- **Python**: Install `pip`.
 - **Node.js**: Install `nvm` and provision `~/.npmrc`
 *(`--no-use` is used when loading `nvm` to reduce startup time, run `nvm use` before using `node` or `npm`)*.
-- **AWS**: Install `pip`, install AWS CLI and provision `~/.aws/credentials`.
+- **AWS**: Iinstall AWS CLI and provision `~/.aws/credentials`.
 
 ## Prerequisites
 

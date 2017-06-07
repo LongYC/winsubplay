@@ -1,0 +1,5 @@
+- name: install pip
+  become: yes
+  become_method: sudo
+  apt:
+    name: python-pip

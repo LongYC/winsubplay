@@ -1,5 +1,7 @@
 ---
 - hosts: ubuntu
+  pre_tasks:
+    - include: tasks/python.yml
   tasks:
     - name: load variables
       include_vars: config/variables.yml
