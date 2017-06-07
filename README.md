@@ -8,13 +8,13 @@ that performs some simple setups for a Ubuntu
 , thus the repository name)*
 system.
 
-- Go to a preferred directory (e.g. workspace inside mounted Windows directory) with `cdhome`.
-- Configure Vim colorscheme.
-- **Git**: Configure `git` user email and name, set the editor to `vim`.
+- **Bash**: Go to a preferred directory (e.g. workspace inside mounted Windows directory) with `cdhome`.
+- **Vim**: Configure colorscheme.
+- **Git**: Configure user email and name, set the editor to `vim`.
 - **Python**: Install `pip`.
-- **Node.js**: Install `nvm` and provision `~/.npmrc`
-*(`--no-use` is used when loading `nvm` to reduce startup time, run `nvm use` before using `node` or `npm`)*.
-- **AWS**: Iinstall AWS CLI and provision `~/.aws/credentials`.
+- **Node.js**: Install `nvm` and provision `~/.npmrc`.
+  - `--no-use` is used when loading `nvm` to reduce startup time, run `nvm use` before using `node`, `npm` or `yarn`.
+- **AWS**: Install AWS CLI and provision `~/.aws/credentials`.
 
 ## Prerequisites
 
@@ -29,9 +29,10 @@ system.
 
 1. Copy `config.example/` into `config/` and update the files accordingly.
 
-2. Run *(there will be a prompt for sudo password)*:
+2. Run:
     ```
-    ansible-playbook winsubplay.yml -i hosts --ask-become-pass
+    $ ansible-playbook winsubplay.yml -i hosts --ask-become-pass
     ```
+   There will be prompt for sudo password.
 
 3. Restart shell or `source ~/.bashrc`.

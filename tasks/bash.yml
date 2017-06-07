@@ -3,3 +3,17 @@
     path: ~/.bashrc
     regexp: ^export PS1=
     line: export PS1="[\[$(tput bold)\]\u\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;7m\]@\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;15m\]\h\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;7m\]:\[$(tput sgr0)\]\[\033[38;5;15m\]\w]\[$(tput bold)\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"
+- name: provision ~/.bash_aliases
+  file:
+    path: ~/.bash_aliases
+    state: touch
+- name: add cdhome to ~/.bash_aliases
+  lineinfile:
+    path: ~/.bash_aliases
+    regexp: '^alias cdhome='
+    line: "alias cdhome='cd {{ cdhome_dir }}'"
+- name: run cdhome in ~/.bashrc
+  lineinfile:
+    path: ~/.bashrc
+    regexp: '^cdhome'
+    line: 'cdhome'
