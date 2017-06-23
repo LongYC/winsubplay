@@ -14,3 +14,7 @@
   copy:
     src: config/files/.aws_credentials
     dest: ~/.aws/credentials
+- name: copy file to ~/.aws/config
+  copy:
+    src: config/files/.aws_config
+    dest: ~/.aws/config

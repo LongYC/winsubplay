@@ -1,0 +1,5 @@
+[default]
+region=us-west-1
+
+[profile production]
+region=us-west-2

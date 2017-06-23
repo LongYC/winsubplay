@@ -14,7 +14,7 @@ system.
 - **Python**: Install `pip`.
 - **Node.js**: Install `nvm` and provision `~/.npmrc`.
   - `--no-use` is used when loading `nvm` to reduce startup time, run `nvm use` before using `node`, `npm` or `yarn`.
-- **AWS**: Install AWS CLI and provision `~/.aws/credentials`.
+- **AWS**: Install AWS CLI, provision `~/.aws/credentials` and `~/.aws/config`.
 
 ## Prerequisites
 
