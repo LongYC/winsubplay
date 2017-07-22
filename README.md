@@ -11,6 +11,7 @@ system.
 - **Bash**: Go to a preferred directory (e.g. workspace inside mounted Windows directory) with `cdhome`.
 - **Vim**: Configure colorscheme.
 - **Git**: Configure user email and name, set the editor to `vim`.
+- **Docker**: Configure environment to use Docker for Windows (requires Windows 10 Creators Update).
 - **Python**: Install `pip`.
 - **Node.js**: Install `nvm` and provision `~/.npmrc`.
   - `--no-use` is used when loading `nvm` to reduce startup time, run `nvm use` before using `node`, `npm` or `yarn`.

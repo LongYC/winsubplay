@@ -8,5 +8,6 @@
     - include: tasks/bash.yml
     - include: tasks/vim.yml
     - include: tasks/git.yml
+    - include: tasks/docker.yml
     - include: tasks/nodejs.yml
     - include: tasks/aws.yml

@@ -1,0 +1,9 @@
+- name: Add Docker for Windows to PATH in in ~/.bashrc
+  lineinfile:
+    path: ~/.bashrc
+    line: 'PATH="$PATH:/mnt/c/Program\ Files/Docker/Docker/resources/bin"'
+- name: add docker to ~/.bash_aliases
+  lineinfile:
+    path: ~/.bash_aliases
+    regexp: '^alias docker='
+    line: "alias docker='docker.exe'"

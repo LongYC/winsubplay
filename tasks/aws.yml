@@ -2,10 +2,6 @@
   pip:
     name: awscli
     extra_args: --upgrade --user
-- name: add ~/.local/bin to PATH
-  lineinfile:
-    path: ~/.bashrc
-    line: 'export PATH=~/.local/bin:$PATH'
 - name: mkdir ~/.aws
   file:
     path: ~/.aws
