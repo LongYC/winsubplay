@@ -2,4 +2,4 @@ cdhome_dir: /mnt/c/my/custom/home
 git_editor: vim
 git_email: my_git_email@example.com
 git_name: my_git_name
-nvm_version: v0.33.2
+nvm_version: v0.33.6
