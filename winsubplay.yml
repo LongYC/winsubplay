@@ -1,13 +1,13 @@
 ---
 - hosts: ubuntu
   pre_tasks:
-    - include: tasks/python.yml
+    - import_tasks: tasks/python.yml
   tasks:
     - name: load variables
       include_vars: config/variables.yml
-    - include: tasks/bash.yml
-    - include: tasks/vim.yml
-    - include: tasks/git.yml
-    - include: tasks/docker.yml
-    - include: tasks/nodejs.yml
-    - include: tasks/aws.yml
+    - import_tasks: tasks/bash.yml
+    - import_tasks: tasks/vim.yml
+    - import_tasks: tasks/git.yml
+    - import_tasks: tasks/docker.yml
+    - import_tasks: tasks/nodejs.yml
+    - import_tasks: tasks/aws.yml

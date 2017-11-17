@@ -22,7 +22,7 @@ system.
 1. [Prepare SSH keys](https://help.ubuntu.com/community/SSH/OpenSSH/Keys "Ubuntu documentation on SSH.").
 
 2. Install
-[Ansible](https://docs.ansible.com/ansible/intro_installation.html "Ansible documentation on installation.") 2.3.
+[Ansible](https://docs.ansible.com/ansible/intro_installation.html "Ansible documentation on installation.") 2.4.
 
 3. Clone this repository.
 
