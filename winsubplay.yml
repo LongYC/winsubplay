@@ -10,4 +10,5 @@
     - import_tasks: tasks/git.yml
     - import_tasks: tasks/docker.yml
     - import_tasks: tasks/nodejs.yml
+    - import_tasks: tasks/maven.yml
     - import_tasks: tasks/aws.yml

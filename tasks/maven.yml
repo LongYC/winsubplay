@@ -1,0 +1,12 @@
+- name: mkdir ~/.m2
+  file:
+    path: ~/.m2
+    state: directory
+- name: copy settings.xml
+  copy:
+    src: config/files/settings.xml
+    dest: ~/.m2/settings.xml
+- name: copy settings-security.xml
+  copy:
+    src: config/files/settings-security.xml
+    dest: ~/.m2/settings-security.xml
